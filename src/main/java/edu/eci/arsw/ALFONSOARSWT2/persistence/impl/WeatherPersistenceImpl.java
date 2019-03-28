@@ -25,8 +25,6 @@ public class WeatherPersistenceImpl implements WeatherPersistence{
 	@Autowired
 	private HttpConnection conection;
 	
-	
-	
 	@Override
 	public String getCityByName(String name) throws IOException {
 		String ciudadJson = "";
