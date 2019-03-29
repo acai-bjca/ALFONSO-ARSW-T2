@@ -17,11 +17,10 @@ public class WeatherController {
 	private WeatherServices weatherServices;
 	
 	@RequestMapping(value="/{name}", method=RequestMethod.GET)
-	public ResponseEntity<?> manejadorGetCity(@PathVariable String city){
-            
+	public ResponseEntity<?> manejadorGetCity(@PathVariable String name){            
         try{
-            System.out.println("#########################################################");
-            return new ResponseEntity<>(weatherServices.getCityByName(city), HttpStatus.OK);
+            //System.out.println("#########################################################");
+            return new ResponseEntity<>(weatherServices.getCityByName(name), HttpStatus.OK);
         }catch(Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }	

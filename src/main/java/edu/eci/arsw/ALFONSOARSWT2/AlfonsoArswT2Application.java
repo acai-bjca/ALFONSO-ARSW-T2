@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-
 @ComponentScan("edu.eci.arsw")
 public class AlfonsoArswT2Application {
 
