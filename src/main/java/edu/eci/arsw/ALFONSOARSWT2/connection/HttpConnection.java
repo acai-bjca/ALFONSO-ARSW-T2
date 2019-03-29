@@ -14,6 +14,7 @@ import edu.eci.arsw.ALFONSOARSWT2.modules.Sys;
 
 @Service
 public class HttpConnection {
+    //https://api.openweathermap.org/data/2.5/weather?q=London&APPID=5412068c04d43bc07ca5af85f0c8c6df
 	private static String nameCity;
 	private static final String USER_AGENT = "Mozilla/5.0";
 	private String URL = "https://api.openweathermap.org/data/2.5/weather?q=";

@@ -21,7 +21,7 @@ import edu.eci.arsw.ALFONSOARSWT2.persistence.WeatherPersistence;
 
 @Service
 public class WeatherPersistenceImpl implements WeatherPersistence{
-	private Map<String, City> ciudades = new HashMap<>();
+	private Map<String, String> ciudades = new HashMap<>();
 	@Autowired
 	private HttpConnection conection;
 	
@@ -30,9 +30,11 @@ public class WeatherPersistenceImpl implements WeatherPersistence{
 		String ciudadJson = "";
 		if(!ciudades.containsKey(name)) {
 			ciudadJson = conection.conectar();
+                        ciudades.put(name, ciudadJson);
 		}else {
-			Gson gson = new Gson();
-			ciudadJson = gson.toJson(ciudades.get(name));
+			//Gson gson = new Gson();
+			//ciudadJson = gson.toJson(ciudades.get(name));
+                        ciudadJson = ciudades.get(name);
 			System.out.println(ciudadJson);
 		}
 		return ciudadJson;
